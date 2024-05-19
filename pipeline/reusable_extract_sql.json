@@ -1,5 +1,5 @@
 {
-	"name": "reusable_extract",
+	"name": "reusable_extract_sql",
 	"properties": {
 		"activities": [
 			{
