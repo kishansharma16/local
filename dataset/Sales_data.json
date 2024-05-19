@@ -1,0 +1,17 @@
+{
+	"name": "Sales_data",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "SalesDB_Server",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [],
+		"typeProperties": {
+			"schema": "SalesDB",
+			"table": "Sales"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}
