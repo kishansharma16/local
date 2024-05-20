@@ -9,45 +9,49 @@
 				"userProperties": [],
 				"typeProperties": {
 					"expression": {
-						"value": "@greater(1,0 )",
+						"value": "@less(10,20 )",
 						"type": "Expression"
 					},
 					"ifFalseActivities": [
 						{
-							"name": "Copy data1",
-							"type": "Copy",
+							"name": "Set variable2",
+							"type": "SetVariable",
 							"dependsOn": [],
 							"policy": {
-								"timeout": "0.12:00:00",
-								"retry": 0,
-								"retryIntervalInSeconds": 30,
 								"secureOutput": false,
 								"secureInput": false
 							},
 							"userProperties": [],
 							"typeProperties": {
-								"enableStaging": false
+								"variableName": "act1",
+								"value": "2"
 							}
 						}
 					],
 					"ifTrueActivities": [
 						{
-							"name": "Spark job definition1",
-							"type": "SparkJob",
+							"name": "Set variable1",
+							"type": "SetVariable",
 							"dependsOn": [],
 							"policy": {
-								"timeout": "0.12:00:00",
-								"retry": 0,
-								"retryIntervalInSeconds": 30,
 								"secureOutput": false,
 								"secureInput": false
 							},
-							"userProperties": []
+							"userProperties": [],
+							"typeProperties": {
+								"variableName": "act1",
+								"value": "1"
+							}
 						}
 					]
 				}
 			}
 		],
+		"variables": {
+			"act1": {
+				"type": "String"
+			}
+		},
 		"annotations": []
 	}
 }
