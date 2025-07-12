@@ -1,0 +1,4 @@
+select s.empname, s.salary, d.depid, d.deptname
+from salary s 
+inner join department d 
+on s.empid=d.empid
